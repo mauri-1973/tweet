@@ -61,3 +61,5 @@ gem "pg", "~> 1.5"
 gem "faker", "~> 3.4"
 
 gem "kaminari", "~> 1.2"
+
+gem "pg_search", "~> 2.3"

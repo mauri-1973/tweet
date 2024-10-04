@@ -1,4 +1,11 @@
 class Tweet < ApplicationRecord
+    include PgSearch::Model
+    pg_search_scope :search_by_description_and_user_name, 
+                     against: [:description, :user_name],
+                     using: {
+                       tsearch: { prefix: true } # Permite búsquedas parciales
+                     }
+   
     validates :description, presence: true, length: { maximum: 280 }
     validates :user_name, presence: true
     # Ocultar los registros que tienen un timestamp en `deleted_at`
