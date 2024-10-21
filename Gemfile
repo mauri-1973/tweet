@@ -58,7 +58,7 @@ end
 
 gem "pg", "~> 1.5"
 
-gem "faker", "~> 3.4"
+gem "faker", "~> 3.5"
 
 gem "kaminari", "~> 1.2"
 
